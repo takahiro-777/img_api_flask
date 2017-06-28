@@ -13,6 +13,9 @@
 		0EB330A11F03CE0B00863C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB330A01F03CE0B00863C22 /* Assets.xcassets */; };
 		0EB330A41F03CE0B00863C22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB330A21F03CE0B00863C22 /* LaunchScreen.storyboard */; };
 		0EB330AF1F03CE0B00863C22 /* ImageRecognizerSample01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB330AE1F03CE0B00863C22 /* ImageRecognizerSample01Tests.swift */; };
+		0EB330C11F03D1B100863C22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB330C01F03D1B100863C22 /* Constants.swift */; };
+		0EB330C71F03D5B400863C22 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB330C61F03D5B400863C22 /* Alamofire.framework */; };
+		0EB330C81F03D5B400863C22 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB330C61F03D5B400863C22 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +28,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0EB330C51F03D32100863C22 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0EB330C81F03D5B400863C22 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0EB330961F03CE0A00863C22 /* ImageRecognizerSample01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognizerSample01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB330991F03CE0B00863C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +53,8 @@
 		0EB330AA1F03CE0B00863C22 /* ImageRecognizerSample01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageRecognizerSample01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB330AE1F03CE0B00863C22 /* ImageRecognizerSample01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecognizerSample01Tests.swift; sourceTree = "<group>"; };
 		0EB330B01F03CE0B00863C22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EB330C01F03D1B100863C22 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0EB330C61F03D5B400863C22 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB330C71F03D5B400863C22 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,7 @@
 		0EB3308D1F03CE0A00863C22 = {
 			isa = PBXGroup;
 			children = (
+				0EB330C61F03D5B400863C22 /* Alamofire.framework */,
 				0EB330981F03CE0A00863C22 /* ImageRecognizerSample01 */,
 				0EB330AD1F03CE0B00863C22 /* ImageRecognizerSample01Tests */,
 				0EB330971F03CE0A00863C22 /* Products */,
@@ -79,6 +100,7 @@
 			children = (
 				0EB330991F03CE0B00863C22 /* AppDelegate.swift */,
 				0EB3309B1F03CE0B00863C22 /* ViewController.swift */,
+				0EB330C01F03D1B100863C22 /* Constants.swift */,
 				0EB3309D1F03CE0B00863C22 /* Main.storyboard */,
 				0EB330A01F03CE0B00863C22 /* Assets.xcassets */,
 				0EB330A21F03CE0B00863C22 /* LaunchScreen.storyboard */,
@@ -106,6 +128,8 @@
 				0EB330921F03CE0A00863C22 /* Sources */,
 				0EB330931F03CE0A00863C22 /* Frameworks */,
 				0EB330941F03CE0A00863C22 /* Resources */,
+				0EB330C51F03D32100863C22 /* Embed Frameworks */,
+				0EB330B91F03CF7000863C22 /* [CP] Carthage */,
 			);
 			buildRules = (
 			);
@@ -196,6 +220,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EB330B91F03CF7000863C22 /* [CP] Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "[CP] Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0EB330921F03CE0A00863C22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -203,6 +245,7 @@
 			files = (
 				0EB3309C1F03CE0B00863C22 /* ViewController.swift in Sources */,
 				0EB3309A1F03CE0B00863C22 /* AppDelegate.swift in Sources */,
+				0EB330C11F03D1B100863C22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +387,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5U4C8KFRC;
+				ENDPOINT_BASE_URL = "http://127.0.0.1:5000";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ImageRecognizerSample01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.engideer.ImageRecognizerSample01;
@@ -357,6 +406,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R5U4C8KFRC;
+				ENDPOINT_BASE_URL = "http://127.0.0.1:5000";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ImageRecognizerSample01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.engideer.ImageRecognizerSample01;

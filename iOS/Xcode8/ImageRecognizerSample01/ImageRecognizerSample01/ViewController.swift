@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var responseLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        Alamofire.request(baseURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
+            .responseString { (response) in
+                switch response.result {
+                case .success(let v):
+                    self.responseLabel.text = v
+                case .failure(let error):
+                    print(error)
+                }
+        }
     }
-
 
 }
 
