@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E34DFED1F11C651007A0120 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34DFEC1F11C651007A0120 /* HttpClient.swift */; };
+		0E34DFF01F11C8B3007A0120 /* DataRequest+Callback.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34DFEF1F11C8B3007A0120 /* DataRequest+Callback.swift.swift */; };
+		0E34DFF21F11C954007A0120 /* HttpClientProtocol.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34DFF11F11C954007A0120 /* HttpClientProtocol.swift.swift */; };
+		0E34DFF41F11C98D007A0120 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E34DFF31F11C98D007A0120 /* SwiftyJSON.framework */; };
+		0E34DFF51F11C98D007A0120 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E34DFF31F11C98D007A0120 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E34DFF71F11C9E5007A0120 /* HttpTypeAliases.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34DFF61F11C9E5007A0120 /* HttpTypeAliases.swift.swift */; };
 		0EB3309A1F03CE0B00863C22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB330991F03CE0B00863C22 /* AppDelegate.swift */; };
 		0EB3309C1F03CE0B00863C22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3309B1F03CE0B00863C22 /* ViewController.swift */; };
 		0EB3309F1F03CE0B00863C22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3309D1F03CE0B00863C22 /* Main.storyboard */; };
@@ -35,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0E34DFF51F11C98D007A0120 /* SwiftyJSON.framework in Embed Frameworks */,
 				0EB330C81F03D5B400863C22 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -43,6 +50,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E34DFEC1F11C651007A0120 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClient.swift; path = Sources/HttpClient.swift; sourceTree = "<group>"; };
+		0E34DFEF1F11C8B3007A0120 /* DataRequest+Callback.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+Callback.swift.swift"; path = "Sources/DataRequest+Callback.swift.swift"; sourceTree = "<group>"; };
+		0E34DFF11F11C954007A0120 /* HttpClientProtocol.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpClientProtocol.swift.swift; path = Sources/HttpClientProtocol.swift.swift; sourceTree = "<group>"; };
+		0E34DFF31F11C98D007A0120 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		0E34DFF61F11C9E5007A0120 /* HttpTypeAliases.swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpTypeAliases.swift.swift; path = Sources/HttpTypeAliases.swift.swift; sourceTree = "<group>"; };
 		0EB330961F03CE0A00863C22 /* ImageRecognizerSample01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageRecognizerSample01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB330991F03CE0B00863C22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB3309B1F03CE0B00863C22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E34DFF41F11C98D007A0120 /* SwiftyJSON.framework in Frameworks */,
 				0EB330C71F03D5B400863C22 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,9 +89,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E34DFEB1F11C62B007A0120 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0E34DFEE1F11C898007A0120 /* Connections */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		0E34DFEE1F11C898007A0120 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				0E34DFEC1F11C651007A0120 /* HttpClient.swift */,
+				0E34DFEF1F11C8B3007A0120 /* DataRequest+Callback.swift.swift */,
+				0E34DFF61F11C9E5007A0120 /* HttpTypeAliases.swift.swift */,
+				0E34DFF11F11C954007A0120 /* HttpClientProtocol.swift.swift */,
+			);
+			name = Connections;
+			sourceTree = "<group>";
+		};
 		0EB3308D1F03CE0A00863C22 = {
 			isa = PBXGroup;
 			children = (
+				0E34DFF31F11C98D007A0120 /* SwiftyJSON.framework */,
 				0EB330C61F03D5B400863C22 /* Alamofire.framework */,
 				0EB330981F03CE0A00863C22 /* ImageRecognizerSample01 */,
 				0EB330AD1F03CE0B00863C22 /* ImageRecognizerSample01Tests */,
@@ -100,6 +133,7 @@
 			children = (
 				0EB330991F03CE0B00863C22 /* AppDelegate.swift */,
 				0EB3309B1F03CE0B00863C22 /* ViewController.swift */,
+				0E34DFEB1F11C62B007A0120 /* Utils */,
 				0EB330C01F03D1B100863C22 /* Constants.swift */,
 				0EB3309D1F03CE0B00863C22 /* Main.storyboard */,
 				0EB330A01F03CE0B00863C22 /* Assets.xcassets */,
@@ -228,6 +262,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "[CP] Carthage";
 			outputPaths = (
@@ -245,7 +280,11 @@
 			files = (
 				0EB3309C1F03CE0B00863C22 /* ViewController.swift in Sources */,
 				0EB3309A1F03CE0B00863C22 /* AppDelegate.swift in Sources */,
+				0E34DFF01F11C8B3007A0120 /* DataRequest+Callback.swift.swift in Sources */,
+				0E34DFF21F11C954007A0120 /* HttpClientProtocol.swift.swift in Sources */,
+				0E34DFED1F11C651007A0120 /* HttpClient.swift in Sources */,
 				0EB330C11F03D1B100863C22 /* Constants.swift in Sources */,
+				0E34DFF71F11C9E5007A0120 /* HttpTypeAliases.swift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +508,7 @@
 				0EB330B51F03CE0B00863C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EB330B61F03CE0B00863C22 /* Build configuration list for PBXNativeTarget "ImageRecognizerSample01Tests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +517,7 @@
 				0EB330B81F03CE0B00863C22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

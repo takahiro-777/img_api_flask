@@ -16,15 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Alamofire.request(baseURL, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil)
-            .responseString { (response) in
-                switch response.result {
-                case .success(let v):
-                    self.responseLabel.text = v
-                case .failure(let error):
-                    print(error)
-                }
-        }
+        HttpClient.shared.get(apiPath: "/")?
+            .success(callback: { (json) in
+                self.responseLabel.text = json.string
+            })
+            .failure(callback: { (error) in
+                print(error)
+            })
     }
 
 }
